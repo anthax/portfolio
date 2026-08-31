@@ -76,6 +76,7 @@ ul {
   align-items: center;
   max-width: 400px;
   margin-top: 20px;
+
   /* 1. Semi-transparent background */
     background: rgba(255, 255, 255, 0.15); 
     
@@ -96,9 +97,10 @@ ul {
 }
 
 .profile-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -144,19 +146,27 @@ ul {
   .first-header {
     font-size: 40px;
   }
-  .portfolio-container {
+  .portfolio-container, .profile-card-container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-    .portfolio {
+    .portfolio, .profile-card {
       width: 85%;
       max-width: 260px;
     }
-    .portfolio p{
+    .portfolio, .profile-card p{
       max-width: 180px;
       font-size: 13px;
+      text-align: center;
     }
+    .profile-card h1 {
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
     .portfolio h2{
       font-size: 20px;
     }
@@ -166,13 +176,17 @@ ul {
   height: auto;
 }
 
-.portfolio ul {
+.profile-card ul {
   width: 100%;
   max-width: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.profile-image {
+    width: 100%;
+    max-width: 150px;
+  }
   }
   @media (max-width: 480px) {
   .portfolio {
