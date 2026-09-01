@@ -27,8 +27,12 @@ header {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 0;
   margin-bottom: 20px;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 code, pre {
@@ -80,6 +84,7 @@ ul {
 .portfolio-container {
   width: 100%;
   padding: 0;
+  gap: 10px;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +208,6 @@ nav {
   border-radius: 40px;
   position: sticky;
   top: 0;
-  z-index: 20;
   align-items: center;
 }
 
@@ -216,6 +220,7 @@ nav {
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
+  z-index: 9999;
 }
 
 .nav-bar ul{
