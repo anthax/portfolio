@@ -1,6 +1,12 @@
 /*  GENERAL STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body, button, html {
-  font-family: 'Geist Mono', monospace;
+  font-family: 'Geist Sans', sans-serif;
   background-color: #121212;
   max-width: 100%;
 }
@@ -9,10 +15,10 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   min-height: 100vh;
-  margin-left: 20px;
-  margin-right: 20px;
   padding-top: 90px;
+  overflow-x: hidden;
 }
 
 header {
@@ -40,34 +46,40 @@ ul {
   justify-content: center;
 }
 
+::selection {
+  background-color: #888888;
+  color: #E0E0E0;
+}
+
 /*SECTIONS STYLING*/  
 .header-section, .main-section {
   display: block;
+  width: 100%;
 }
 
 /* PORTFOLIO SECTION STYLING */
 .portfolio p {
   text-align: center;
   width: 100%;
-  max-width: 220px;
-  word-wrap: break-word;
-}
-
-.portfolio img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
 }
 
 .portfolio ul {
   width: 100%;
-  max-width: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.portfolio h2 {
+  margin: 15px;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
 .portfolio-container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -76,15 +88,16 @@ ul {
 
 .portfolio {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  border: 2px solid #444444; 
-  padding: 25px;
-  margin: 20px 20px;
-  border-radius: 15px;
+  border: 2px solid #444444;
+  margin: 20px;
+  border-radius: 70px;
   width: 100%;
-  max-width: 290px;
+  max-width: none;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 /* FADE IN ANIMATION */
@@ -126,6 +139,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   max-width: 400px;
   margin-top: 20px;
 
@@ -249,63 +263,86 @@ nav {
   .header {
     font-size: 40px;
   }
-  .portfolio-container, .profile-card-container {
+
+  .portfolio-container,
+  .profile-card-container {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-    .portfolio, .profile-card {
-      width: 85%;
-      max-width: 260px;
-    }
-    .portfolio, .profile-card p{
-      max-width: 180px;
-      font-size: 13px;
-      text-align: center;
-    }
-    .profile-card h1 {
-  width: 100%;
-  max-width: 220px;
-  text-align: center;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-    .portfolio h2{
-      font-size: 20px;
-    }
-    .portfolio img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-}
 
-.profile-card ul {
-  width: 100%;
-  max-width: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.profile-image {
+  .portfolio {
+    width: 100%;
+    max-width: none;
+  }
+
+  .profile-card {
+    width: 85%;
+    max-width: 260px;
+  }
+
+  .portfolio p {
+    max-width: 180px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .profile-card p {
+    max-width: 180px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .profile-card h1 {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .portfolio h2 {
+    font-size: 20px;
+  }
+
+  .portfolio img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .profile-card ul {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-image {
     width: 100%;
     max-width: 150px;
   }
-  }
-  @media (max-width: 480px) {
-  .portfolio {
-    max-width: 220px;
-  }
-  .portfolio img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
 }
 
-.portfolio ul {
-  width: 100%;
-  max-width: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@media (max-width: 480px) {
+  .portfolio {
+    width: 100%;
+    max-width: none;
+  }
+
+  .portfolio img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .portfolio ul {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
