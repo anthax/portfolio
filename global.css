@@ -1,4 +1,6 @@
-/*  GENERAL STYLING */
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERAL STYLING - ALL PAGES */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +8,14 @@
 }
 
 body, button, html {
-  font-family: 'Geist Sans', sans-serif;
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   background-color: #121212;
   max-width: 100%;
 }
 
-body{ 
+body{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +40,7 @@ main {
 }
 
 code, pre {
-  font-family: 'Geist Mono', monospace;
+  font-family: 'Geist', sans-serif;
 }
 
 h1, p, h2 {
@@ -56,66 +60,11 @@ ul {
   color: #E0E0E0;
 }
 
-/*SECTIONS STYLING*/  
-.header-section, .main-section {
-  display: block;
-  width: 100%;
-}
-
-/* PORTFOLIO SECTION STYLING */
-.portfolio p {
-  text-align: center;
-  width: 100%;
-}
-
-.portfolio ul {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.portfolio h2 {
-  margin: 15px;
-  font-size: 20px;
-  white-space: nowrap;
-}
-
-.portfolio-container {
-  width: 100%;
-  padding: 0;
-  gap: 10px;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.portfolio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid #444444;
-  margin: 5px;
-  border-radius: 70px;
-  width: 100%;
-  max-width: none;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-.portfolio:hover {
-  border-color: #888888;
-  transition: all 0.2s ease;
-}
-
-/* FADE IN ANIMATION */
- @keyframes fadeInUp {
+/* ANIMATION - ALL PAGES */
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px); /* Starts 20 pixels lower */
+      transform: translateY(20px); /* Starts 20 pixels lower */
   }
   to {
     opacity: 1;
@@ -123,87 +72,18 @@ ul {
   }
 }
 
-/* HEADER SECTION */
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #E0E0E0;
-  font-size: 70px;
-  animation: fadeInUp 0.6s ease-out forwards;
-  position: relative;
-  z-index: 1;
-  margin-top: 24px;
-}
-
-/* PROFILE CARD STYLING - FIRST PROJECT */
-.profile-card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.profile-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  max-width: 400px;
-  margin-top: 20px;
-
-  /* 1. Semi-transparent background */
-    background: rgba(255, 255, 255, 0.15); 
-    
-    /* 2. The frosted glass blur effect (and Safari support) */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    
-    /* 3. Highlighting the faux glass edges */
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    
-    /* 4. Soft shadow to separate from the background */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-    
-    /* 5. Clean layout styling */
-    border-radius: 16px;
-    padding: 24px;
-    color: #ffffff;
-}
-
-.profile-image {
+/* SECTIONS - INDEX AND PORTFOLIO PAGES */
+.header-section, .main-section {
+  display: block;
   width: 100%;
-  max-width: 200px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
-/* GENERAL STYLING FOR BUTTONS ACROSS PAGES */
-.btn-portfolio {
-  margin: 15px;
-  border: none;
-  padding: 16px;
-  border-radius: 32px;
-  background-color: #888888;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.btn-portfolio:hover {
-  background-color: #ffffff;
-  color: #888888;
-  /* The core magic: property | duration | timing-function */
-  transition: all 0.3s ease-in;
-}
-
-/* NAV BAR STYLING */
+/* NAV BAR - ALL PAGES */
 nav {
   margin: 0 auto;
   width: auto;
-  background-color: #444444;
+  background-color: rgba(68, 68, 68, 0.5);
+  backdrop-filter: blur(10px);
   border: none;
   border-radius: 40px;
   position: sticky;
@@ -269,7 +149,182 @@ nav {
   justify-content: center;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* BUTTONS - ALL PAGES */
+.btn-portfolio {
+  margin: 15px;
+  border: none;
+  padding: 16px;
+  border-radius: 32px;
+  background-color: #888888;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-portfolio:hover {
+  background-color: #ffffff;
+  color: #888888;
+  /* The core magic: property | duration | timing-function */
+  transition: all 0.3s ease-in;
+}
+
+/* INDEX AND PORTFOLIO PAGE */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #E0E0E0;
+  font-size: 70px;
+  animation: fadeInUp 0.6s ease-out forwards;
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+}
+
+.portfolio-container {
+  width: 100%;
+  padding: 0;
+  gap: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #444444;
+  margin: 5px 50px;
+  border-radius: 70px;
+  width: 100%;
+  max-width: none;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.portfolio p {
+  text-align: center;
+  width: 100%;
+}
+
+.portfolio ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio h2 {
+  margin: 15px;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.portfolio:hover {
+  border-color: #888888;
+  transition: all 0.2s ease;
+}
+
+/* PROFILE CARD PAGE */
+.profile-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 400px;
+  margin-top: 20px;
+
+  /* 1. Semi-transparent background */
+    background: rgba(255, 255, 255, 0.15); 
+    
+    /* 2. The frosted glass blur effect (and Safari support) */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* 3. Highlighting the faux glass edges */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    
+    /* 4. Soft shadow to separate from the background */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    
+    /* 5. Clean layout styling */
+    border-radius: 16px;
+    padding: 24px;
+    color: #ffffff;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* CONTACT FORM PAGE */
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #444;
+    border: none;
+    border-radius: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contact-form {
+    margin-bottom: 15px;
+  }
+
+  .form label {
+    color: #E0E0E0;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 70px;
+    background-color: #888;
+    color: #fff;
+  }
+
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 70px;
+    background-color: #888;
+    color: #fff;
+    resize:  none;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+
+  .form-container textarea::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+/* MOBILE RESPONSIVENESS - ALL PAGES */
 @media (max-width: 768px) {
   .header {
     font-size: 40px;
