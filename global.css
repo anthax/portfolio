@@ -391,30 +391,10 @@ nav {
     width: 100%;
     max-width: 150px;
   }
+  .contact-form {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
-@media (max-width: 480px) {
-  body p{
-    margin: 20px;
-  }
-  
-  .portfolio {
-    width: 100%;
-    margin: 0 20px;
-    max-width: none;
-  }
 
-  .portfolio img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-  }
-
-  .portfolio ul {
-    width: 100%;
-    max-width: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
