@@ -331,6 +331,10 @@ nav {
     font-size: 40px;
   }
 
+  .home-main {
+    margin: 0 10px;
+  }
+
   .portfolio-container,
   .profile-card-container {
     width: 100%;
