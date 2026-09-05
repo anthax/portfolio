@@ -460,7 +460,7 @@ nav ul {
 
 
 
-@media (max-width: 767px){
+@media (max-width: 720px){
   nav h2 {
     font-size: 25px;
   }
