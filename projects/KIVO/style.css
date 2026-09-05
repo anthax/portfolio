@@ -250,13 +250,13 @@ nav ul {
 
   nav a {
     font-size: 0.8rem;
-    padding: 5px;
+    padding: 10px 5px;
   }
 }
 
 @media (min-width: 1023px){
   nav h2{
-    font-size: 40px;
+    font-size: 30px;
   }
 
   nav a {
