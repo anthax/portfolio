@@ -75,7 +75,7 @@ td {
   border-collapse: separate;
 }
 
-button, a {
+button, a, .icon {
   -webkit-tap-highlight-color: transparent;
 }
 
