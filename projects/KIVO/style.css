@@ -75,7 +75,7 @@ td {
   border-collapse: separate;
 }
 
-button, a, .icon {
+button, a {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -533,6 +533,10 @@ nav ul {
     min-width: 160px;
     transform: translateY(-8px);
     transition: all 0.3s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
   }
 
   .menu-dropdown ul {
