@@ -91,6 +91,13 @@ button:focus {
   'opsz' 24
 }
 
+.material-symbols-rounded {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
 
 /* HEADER */
 header{
@@ -533,10 +540,6 @@ nav ul {
     min-width: 160px;
     transform: translateY(-8px);
     transition: all 0.3s ease-in-out;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
   }
 
   .menu-dropdown ul {
