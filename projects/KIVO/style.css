@@ -478,8 +478,51 @@ nav ul {
   border: 1px dashed var(--accent);
 }
 
-/* VISIT SECTION */
+/* MENU PAGE - STARTERS */
+.starters {
+  background-color: var(--foreground);
+  width: calc(100% - 40px);
+  margin: 20px;
+  border-radius: 20px;
+}
 
+.c-s-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.s-1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--background);
+  margin: 20px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.s-1 img {
+  border-radius: 20px 0 0 20px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.s-1 h4 {
+  color: var(--primary-text);
+}
+
+.s-t {
+  display: flex;
+  flex-direction: column;
+}
+
+.s-t p {
+  text-align: left;
+  margin: 10px 10px 0 0;
+}
 
 
 @media (max-width: 720px){
