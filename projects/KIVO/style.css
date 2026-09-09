@@ -614,6 +614,86 @@ nav ul {
   color: var(--primary-text);
 }
 
+/* RESERVATION PAGE */
+.r-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  width: calc(100% - 40px);
+}
+
+.r-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(100%, 500px);
+}
+
+.r-form label {
+  color: var(--primary-text);
+  margin-left: 10px;
+}
+
+.r-form input {
+  background-color:rgba(198, 146, 82, 0.3);
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  border: 2px solid var(--accent);
+  caret-color: var(--secondary-text);
+  color: var(--primary-text);
+}
+
+.r-form input:focus, textarea:focus {
+  background-color: rgba(198, 146, 82, 0.3);
+  border: 2px solid var(--accent);
+  outline: none;
+}
+
+.r-form textarea {
+  padding: 15px;
+  background-color:rgba(198, 146, 82, 0.3);
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  border: 2px solid var(--accent);
+  caret-color: var(--secondary-text);
+  color: var(--primary-text);
+  resize:  none;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.r-form textarea::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+.r-form input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.r-form button {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 40px;
+  border: none;
+  background: var(--accent);
+  color: var(--primary-text);
+  transition: all 0.3s ease-in-out;
+}
+
+.r-form button:hover {
+  background-color: var(--background);
+  color: var(--secondary-text);
+  border: 1px dashed var(--accent);
+}
 
 @media (max-width: 720px){
   .gallery-container {
