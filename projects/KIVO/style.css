@@ -778,6 +778,9 @@ nav ul {
     pointer-events: auto;
     transform: translateY(0);
   }
+  .pc {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 721px){
