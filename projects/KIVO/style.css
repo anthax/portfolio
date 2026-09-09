@@ -781,6 +781,10 @@ nav ul {
   .pc {
     flex-direction: column;
   }
+
+  .s-t {
+    font-size: 0.7rem;
+  }
 }
 
 @media (min-width: 721px){
