@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --color-background: #121212;
+  --color-text-primary: #E0E0E0;
+  --color-text-secondary: #B0B0B0;
+  --color-gray: #888888;
+  --color-panel: #444444;
+  --color-panel-transparent: rgba(68, 68, 68, 0.5);
+  --color-white: #ffffff;
+}
+
 /* GENERAL STYLING - ALL PAGES */
 * {
   margin: 0;
@@ -11,7 +21,7 @@ body, button, html {
   font-family: "Geist", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background-color: #121212;
+  background-color: var(--color-background);
   max-width: 100%;
 }
 
@@ -44,11 +54,11 @@ code, pre {
 }
 
 h1, p, h2 {
-  color: #E0E0E0;
+  color: var(--color-text-primary);
 }
 
 ul {
-  color: #B0B0B0;
+  color: var(--color-text-secondary);
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -56,8 +66,8 @@ ul {
 }
 
 ::selection {
-  background-color: #888888;
-  color: #E0E0E0;
+  background-color: var(--color-gray);
+  color: var(--color-text-primary);
 }
 
 /* ANIMATION - ALL PAGES */
@@ -82,7 +92,7 @@ ul {
 nav {
   margin: 0 auto;
   width: auto;
-  background-color: rgba(68, 68, 68, 0.5);
+  background-color: var(--color-panel-transparent);
   backdrop-filter: blur(10px);
   border: none;
   border-radius: 40px;
@@ -118,7 +128,7 @@ nav {
 }
 
 .nav-bar a{
-  color: #B0B0B0;
+  color: var(--color-text-secondary);
   text-decoration: none;
   padding: 15px 18px;
   margin: 5px;
@@ -128,8 +138,8 @@ nav {
 }
 
 .nav-bar a:hover{
-  background-color: #ffffff;
-  color: #888888;
+  background-color: var(--color-white);
+  color: var(--color-gray);
   transition: all 0.3s ease-in;
 }
 
@@ -155,16 +165,44 @@ nav {
   border: none;
   padding: 16px;
   border-radius: 32px;
-  background-color: #888888;
-  color: #ffffff;
+  background-color: var(--color-gray);
+  color: var(--color-white);
   cursor: pointer;
 }
 
 .btn-portfolio:hover {
-  background-color: #ffffff;
-  color: #888888;
+  background-color: var(--color-white);
+  color: var(--color-gray);
   /* The core magic: property | duration | timing-function */
   transition: all 0.3s ease-in;
+}
+
+/* HOME PAGE */
+.c-card{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--color-gray);
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.c-card h3 {
+  color: var(--color-text-secondary);
+}
+
+.i-card {
+  width: auto;
+  border: 2px solid var(--color-panel);
+  padding: 12px;
+  border-radius: 40px;
+}
+
+.upcoming {
+  color: var(--color-text-primary);
+  font-size: 50px;
 }
 
 /* INDEX AND PORTFOLIO PAGE */
@@ -173,7 +211,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #E0E0E0;
+  color: var(--color-text-primary);
   font-size: 70px;
   animation: fadeInUp 0.6s ease-out forwards;
   position: relative;
@@ -198,7 +236,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #444444;
+  border: 2px solid var(--color-panel);
   margin: 0;
   border-radius: 70px;
   width: 100%;
@@ -219,7 +257,7 @@ nav {
 }
 
 .portfolio:hover {
-  border-color: #888888;
+  border-color: var(--color-gray);
   transition: all 0.2s ease;
 }
 
@@ -227,7 +265,7 @@ nav {
   .form-container {
     width: 100%;
     max-width: 400px;
-    background-color: #444;
+    background-color: var(--color-panel);
     border: none;
     border-radius: 40px;
     padding: 20px;
@@ -242,7 +280,7 @@ nav {
   }
 
   .form label {
-    color: #E0E0E0;
+    color: var(--color-text-primary);
     font-weight: bold;
   }
 
@@ -252,8 +290,8 @@ nav {
     margin: 5px 0;
     border: none;
     border-radius: 70px;
-    background-color: #888;
-    color: #fff;
+    background-color: var(--color-gray);
+    color: var(--color-white);
   }
 
   .form-container textarea {
@@ -262,8 +300,8 @@ nav {
     margin: 5px 0;
     border: none;
     border-radius: 70px;
-    background-color: #888;
-    color: #fff;
+    background-color: var(--color-gray);
+    color: var(--color-white);
     resize:  none;
     overflow-x: auto;
     scrollbar-width: none; /* Firefox */
