@@ -212,13 +212,6 @@ nav {
   width: 100%;
 }
 
-.portfolio ul {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .portfolio h2 {
   margin: 15px;
   font-size: 20px;
@@ -228,50 +221,6 @@ nav {
 .portfolio:hover {
   border-color: #888888;
   transition: all 0.2s ease;
-}
-
-/* PROFILE CARD PAGE */
-.profile-card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.profile-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  max-width: 400px;
-  margin-top: 20px;
-
-  /* 1. Semi-transparent background */
-    background: rgba(255, 255, 255, 0.15); 
-    
-    /* 2. The frosted glass blur effect (and Safari support) */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    
-    /* 3. Highlighting the faux glass edges */
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    
-    /* 4. Soft shadow to separate from the background */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-    
-    /* 5. Clean layout styling */
-    border-radius: 16px;
-    padding: 24px;
-    color: #ffffff;
-}
-
-.profile-image {
-  width: 100%;
-  max-width: 200px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 /* CONTACT FORM PAGE */
@@ -354,57 +303,10 @@ nav {
     margin: 0;
   }
 
-  .profile-card {
-    width: 85%;
-    max-width: 260px;
-  }
-
-  .portfolio p {
-    max-width: 180px;
-    font-size: 13px;
-    text-align: center;
-  }
-
-  .profile-card p {
-    max-width: 180px;
-    font-size: 13px;
-    text-align: center;
-  }
-
-  .profile-card h1 {
-    width: 100%;
-    max-width: 220px;
-    text-align: center;
-    overflow-wrap: break-word;
-    word-break: break-word;
-  }
-
   .portfolio h2 {
     font-size: 16px;
   }
 
-  .portfolio img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-  }
-
-  .portfolio ul {
-    font-size: 13px;
-  }
-
-  .profile-card ul {
-    width: 100%;
-    max-width: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .profile-image {
-    width: 100%;
-    max-width: 150px;
-  }
   .form-container {
     width: 100%;
     max-width: 300px;
